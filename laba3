@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int funone(int a1, int b1, int a2, int b2)
+{
+	
+	for (int x = -100; x < 100; x++) {
+		if ((a1 * x + b1) == (a2 * x + b2)) {
+			return x;
+		}
+	}
+		return 999;
+
+}
+
+	int main() {
+	setlocale(LC_ALL, "");
+	cout << "Введите числа:" << endl;
+	int a1, b1, a2, b2;
+	int x, y;
+	cin >> a1 >> b1 >> a2 >> b2;
+	x = funone(a1, b1, a2, b2);
+	if (x == 999) {
+		cout << "Нет решений";
+	}
+	else {
+		y = a1 * x + b1;
+		cout << "x = " << x << '\t' << "y = " << y;
+
+	}
+	
+	
+	
+	
+	return 0;
+}
